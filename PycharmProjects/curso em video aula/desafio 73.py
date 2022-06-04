@@ -1,0 +1,11 @@
+tupla =('santos', 'atlético', 'corinthians', 'cuiaba', 'internacional', 'avai', 'bragantino', 'palmeiras', 'flamengo', 'coritiba', 'são paulo',
+        'botafogo', 'fluminense', 'américa-MG', 'ceará', 'athletico-PR', 'atletico-GO', 'goiás', 'juventude', 'fortaleza')
+print(f'Lista de times do brasileirão:{tupla}')
+print('~'*30)
+print(f'os 5 primeiros colocados {tupla[:5]}')
+print('~'*30)
+print(f'os 4 ultimos são {tupla[-4:]}')
+print('~'*30)
+print(f'os time em ordem alfabetica: {sorted(tupla)}')
+print('~'*30)
+print('o bragantino esta na {}°'.format(tupla.index('bragantino')+1))
