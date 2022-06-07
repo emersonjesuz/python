@@ -10,7 +10,7 @@ from model import pessoa
 app = Flask(__name__)
 @app.route('/')
 def index(): 
-    nome = dict("cpf":44488799929,"pessoa":"allan","datanascimento":"15-04-1999")
+    nome = mostrarTodos()
     return render_template("index.html",nome = nome)
 
 @app.route('/')
