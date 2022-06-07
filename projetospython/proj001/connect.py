@@ -1,4 +1,4 @@
-import pandas as pd
+
 from tinydb import TinyDB,Query
 from model  import pessoa
 
@@ -9,8 +9,10 @@ def inserir(model: pessoa):
 
 def mostrarTodos():
     todos = bd.all()
-    todos = pd.DataFrame(bd)
-    return todos
+    t = todos
+    for i in t:
+        print(i)
+    
 
 def deletarPessoa(cpf:int):
     if bd.search(usuario.CPF==cpf):

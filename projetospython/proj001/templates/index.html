@@ -5,18 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .container{
+            padding: 20%;
+            background-color: azure;
+            border: 3px solid black;
+        }
+        .conj{
+            display: block;
+            background-color: antiquewhite;
+            color: rgb(20, 49, 49);
+            
+        }
+        div{
+            padding: 10px;
+            color: blueviolet;
+        }
+        button{
+            padding: 5px;
+            background-color: rgb(68, 68, 238);
+        }
+    </style>
 </head>
 <body>
-    <h1>Pagina de cadastro</h1>
-<form action="enviar", method="POST">
+    <div class="container">
+        <form action="">
+            <div>
+                <label for="pessoa">CPF</label>
+                <input type="text" id="cpf" name="cpf" class="conj">
+        
+            </div>
+            <div>
+                <label for="pessoa">Nome</label>
+                <input type="text" id="pessoa" name="pessoa" class="conj">
+        
+            </div>
+            <div>
+                <label for="data">DATA DE NASCIMENTO</label>
+                <input type="date" id="data" name="data" class="conj">
+            </div>
+        
+            <button type="submit">salvar</button>
+        </form>
+    </div>
     
-        <label for="pessoas">seu nome</label>
-        <input id="pessoas" name="pessoas" checked type="text">
-        <label for=""></label>
-        <button type="submit">enviar</button>
-</form>
-
-<h1>{{result}}</h1>
+    <h1>ola eu sou { }}</h1>
+    
     
 </body>
 </html>

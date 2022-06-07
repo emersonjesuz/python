@@ -6,10 +6,9 @@ from connect import atualizarPessoa
 
 
 def main():
-    pe = pessoa(12353529,"mathues", "00-08-1999")
+    pe = pessoa(1235359,"mathues", "00-08-1999")
     pe2 = pessoa(1111111,'marco','12-07-1998')
-    
-    atualizarPessoa(12353529,pe)
+    inserir(pe)
     t = mostrarTodos()
     print(t)
 main()
