@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <link rel="stylesheet"   href="style.css">
+</head>
+<body>
+
+  <py-script >
+    from js import console
+    from datetime import datetime
+    tasks = []
+
+    def atualiza_lista():
+      tasks_criadas = Element('tasks_criadas')
+      tasks_criadas.element.innerText = ''
+      for i in tasks:
+        tasks_criadas.element.innerText += f'{i["content"]}\n'
+
+    def cria_task(*args, **kags):
+      input_task = Element('input_task')
+      task = input_task.element.value
+
+      y = list(filter(lambda x: x['content'] == task, tasks))
+      if len(y) > 0:
+        messege = Element('messege')
+        messege.element.style.display = 'flex'
+        return none
+      
+      dict_task = {'task-id':len(task),
+            'content': task,
+            'data': datetime.now(),  
+            'status':'C' }
+
+      tasks.append(dict_task)
+      input_task.element.value = ''
+      atualiza_lista()
+    
+    def add_task_event(e):
+      if e.key == 'Enter':
+        cria_task()
+     
+
+
+    input_task = Element('input_task')
+    input_task.element.onkeypress = add_task_event
+
+  </py-script>
+  <main>
+    <div class='conteiner'>
+    <div style='display: none' class='alert' role='alert'id='messege'>
+      Já existe essa tarefa
+    </div>
+    <h3> Lista de tarefas</h3>
+    <input type="text" id='input_task'class='form-control' placeholder='Digite um valor '>
+    <br>
+    <button  id='btn_task' type='submit'pys-onClick='cria_task' > Enviar</button>
+    <br>
+    <hr>
+
+    <div class='row'>
+      <div class='col-md'>
+        <h3 style='color:red'>criadas</h3>
+        <div id='tasks_criadas'>
+          
+        </div>
+        <hr>
+
+      </div>
+      <div>
+        <h3 style='color:orange'>feitas</h3>
+        <hr>
+
+      </div>
+      
+    </div>
+    </div>
+  </main>
+</body>
+</html>

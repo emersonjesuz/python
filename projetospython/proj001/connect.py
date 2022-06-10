@@ -9,9 +9,9 @@ def inserir(model: pessoa):
 
 def mostrarTodos():
     todos = bd.all()
-    t = todos
-    for i in t:
-        print(i)
+    for t in todos:
+        print(t)
+    
     
 
 def deletarPessoa(cpf:int):

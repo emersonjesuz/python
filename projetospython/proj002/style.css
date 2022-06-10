@@ -1,0 +1,31 @@
+@charset "UTF-8";
+ *{
+    padding: 0px;
+    margin: 0px;
+ }
+
+ main{
+    display: inline-block;
+    margin: auto;
+    
+    
+
+ }
+ div{
+    padding:10px;
+    margin:auto;
+    
+    color: rgb(235, 143, 31);
+ }
+ button{
+    margin-top:10px;
+    background-color: blue;
+    color: white;
+    padding:5px;
+ }
+
+ #messege{
+    background-color: black;
+    color: red;
+    opacity: 1s;
+ }

@@ -1,21 +1,24 @@
+
 from distutils.log import debug
-from unicodedata import name
-from unittest import result
-from flask import Flask, flash, request, render_template
+from flask import Flask, request, render_template
 from connect import mostrarTodos,atualizarPessoa,deletarPessoa,inserir
 from model import pessoa
 
 
 
 app = Flask(__name__)
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def index(): 
-    nome = mostrarTodos()
-    return render_template("index.html",nome = nome)
+    return render_template('index.html')
 
 @app.route('/')
 def usuario():
+    cpf = request.form['cpf']
     nome = request.form['pessoa']
+    dataNascimento = request.form['data']
+    pessoa = (cpf,nome,dataNascimento)
+    inserir(pessoa)
+
 
 
 if __name__=='__main__':

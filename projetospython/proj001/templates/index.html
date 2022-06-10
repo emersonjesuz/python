@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
     <style>
         *{
@@ -30,10 +32,16 @@
         button{
             padding: 5px;
             background-color: rgb(68, 68, 238);
+            color: black;
         }
     </style>
 </head>
 <body>
+    <py-env>
+        - connect
+        - time
+    </py-env>
+
     <div class="container">
         <form action="">
             <div>
@@ -51,12 +59,38 @@
                 <input type="date" id="data" name="data" class="conj">
             </div>
         
-            <button type="submit">salvar</button>
+            <button  type="submit">salvar</button>
         </form>
     </div>
     
-    <h1>ola eu sou {{ nome }}</h1>
+    <table>
+        <tr>
+            <th>CPF</th>
+            <th>NOME</th>
+            <th>DATA DE NASCIMENTO</th>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+
+            <td id="m">
+                {{ m }}
+            </td>
+            <td>
+                {{  }}
+            </td>
+        </tr>
+    </table>
     
+    <py-script oninput=" m">
+        import connect
+        pessoa = [cpf, pessoa, data]
+        connect.inserir(pessoa)
+        def m():
+            print(connect.mostrarTodos())
+
+    </py-script>
     
 </body>
 </html>
