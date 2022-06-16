@@ -6,22 +6,28 @@
     padding: 0px;
     font-family: 'Chakra Petch', sans-serif;
     
-  
-}
-html{
-    background-color: rgba(0, 0, 0, 0.949);
 }
 body{
-    background-image: url(imagens/1655175929420.jpg);
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
+ 
+    background-color:rgb(61, 48, 60) ;
+    box-shadow: 2px 0px 8px 8px  rgba(14, 14, 14, 0.502) ;
+
+}
+.container{
+    height: 100vh;
+    background-image: url(imagens/Fundo.jpg);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.606);
+    background-repeat: repeat;
+    background-attachment: scroll;
     
+    background-size:contain ;
 
 }
 header{
-    margin: auto;
-    width: 100%;
+    
+    margin: 0px;
+    width: 100vw;
+    
     color: aliceblue;
     text-shadow: 2px 2px 2px black;
     box-sizing: border-box;
@@ -29,7 +35,7 @@ header{
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.744);
 }
- p  {
+p  {
     color: rgb(243, 241, 236);
     font-size: 1em;
 }
@@ -39,47 +45,45 @@ h1.nome{
     color: blueviolet;
     font-variant:small-caps ;
     text-shadow: 2px 2px 2px black;
+    width: 70%;
+    margin: auto;
+    text-align: center;
 }
-h1.nome:hover, header > p:hover{
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(28, 3, 52);
-}
+
+
 header > p{
     text-align: center;
-    font-size: 1em;
+    font-size: .9em;
     padding-bottom: 5px;
+    
 }
 
+.main{
+    padding: 40px;
+}
 
-h1{
+h2{
     color: rgb(199, 170, 8);
     padding:5%;
-    font-size:  0.8em;
+    font-size:  0.9em;
     text-align: center;
     text-decoration: none;
     
 }
-h1:hover{
+h2:hover{
     color: rgb(188, 223, 255);
 }
-span{
-    color:bisque;
-    font-size:0.8em;
-    text-align: center;
-}
-span:hover{
-    color: rgb(39, 39, 34);
-    font-size: 1%;
-}
+
 div{
-    background-image:linear-gradient(to right, transparent,rgb(18, 16, 16),transparent);
+    background-image:linear-gradient(to right, transparent,rgb(18, 16, 16),rgb(18, 16, 16),transparent);
     
     border: 1px  solid rgba(19, 19, 19, 0.561);
-    
+    height: 40%;
     border-left: 1px;
     border-right: 1px;
     width: 50%;
     margin: auto;
+    box-shadow: 2px 0px 5px rgba(245, 245, 220, 0.187);
     
 }
 div:hover{
@@ -91,3 +95,4 @@ div:hover{
 a{
     text-decoration: none;
 }
+
